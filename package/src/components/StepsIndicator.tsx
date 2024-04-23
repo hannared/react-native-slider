@@ -12,6 +12,7 @@ export const StepsIndicator = ({
   sliderWidth,
   currentValue,
   StepMarker,
+  Thumb,
   renderStepNumber,
   thumbImage,
   isLTR,
@@ -20,6 +21,7 @@ export const StepsIndicator = ({
   sliderWidth: number;
   currentValue?: number;
   StepMarker?: FC<MarkerProps>;
+  Thumb?: FC<MarkerProps>;
   renderStepNumber?: boolean;
   thumbImage?: ImageSource;
   isLTR?: boolean;
@@ -47,7 +49,9 @@ export const StepsIndicator = ({
                 isTrue={currentValue === i}
                 thumbImage={thumbImage}
                 StepMarker={StepMarker}
+                Thumb={Thumb}
               />
+
               {renderStepNumber ? (
                 <StepNumber
                   i={i}

@@ -179,6 +179,11 @@ type Props = ViewProps &
     StepMarker?: FC<MarkerProps>;
 
     /**
+     * Component to be rendered for each step indicator.
+     */
+    Thumb?: FC<MarkerProps>;
+
+    /**
      *
      */
     renderStepNumber?: boolean;
@@ -298,6 +303,7 @@ const SliderComponent = (
           thumbImage={localProps.thumbImage}
           StepMarker={localProps.StepMarker}
           isLTR={localProps.inverted}
+          Thumb={localProps.Thumb}
         />
       ) : null}
       <RCTSliderNativeComponent
